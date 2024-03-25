@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>RoniWellington</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="cheatsheet.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+    <div class="container-fluid d-flex align-items-center">
+      <a href="../index.html"><h1 class="d-flex align-items-center fs-4 text-white mb-0">
+        RoniWellington
+      </h1></a>
+      
+
+
+      <a href="../examples/cheatsheet-rtl/" class="ms-auto link-light" hreflang="ar">RTL cheatsheet</a>
+
+    </div>
+
+
+
+  </header>
+  <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
+    <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+    <nav class="small" id="toc">
+      <ul class="list-unstyled">
+        <li class="my-2">
+          <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false"
+            data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+          <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+            <li><a class="d-inline-flex align-items-center rounded" href="#typography">Typography</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#images">Images</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#tables">Tables</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#figures">Figures</a></li>
+          </ul>
+        </li>
+        <li class="my-2">
+          <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false"
+            data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
+          <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+            <li><a class="d-inline-flex align-items-center rounded" href="#overview">Overview</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#disabled-forms">Disabled forms</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#sizing">Sizing</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#input-group">Input group</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#floating-labels">Floating labels</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#validation">Validation</a></li>
+          </ul>
+        </li>
+        <li class="my-2">
+          <button class="btn d-inline-flex align-items-center collapsed" data-bs-toggle="collapse" aria-expanded="false"
+            data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
+          <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+            <li><a class="d-inline-flex align-items-center rounded" href="#accordion">Accordion</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#alerts">Alerts</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#badge">Badge</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#breadcrumb">Breadcrumb</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#buttons">Buttons</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#button-group">Button group</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#card">Card</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#carousel">Carousel</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#dropdowns">Dropdowns</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#list-group">List group</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#modal">Modal</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#navs">Navs</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#navbar">Navbar</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#pagination">Pagination</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#popovers">Popovers</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#progress">Progress</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#scrollspy">Scrollspy</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#spinners">Spinners</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#toasts">Toasts</a></li>
+            <li><a class="d-inline-flex align-items-center rounded" href="#tooltips">Tooltips</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="bd-cheatsheet container-fluid bg-body">
+    <section id="content">
+      <div class="bg-dark">
+        <h3 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 text-white">Documentação</h3>
+
+        <article class="my-3 sticky-xl-top" id="typography">
+          <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+            <h3>Excel</h3>
+            <a class="d-flex align-items-center text-white" href="../content/typography/">Introdução HTML</a>
+            <a class="d-flex align-items-center text-white" href="../content/typography/">Documentation</a>
+            <a class="d-flex align-items-center text-white" href="../content/typography/">Documentation</a>
+            <a class="d-flex align-items-center text-white" href="../content/typography/">Documentation</a>
+          </div>
+      </div>
+
+      <div>
+
+
+        <div class="bd-example">
+          <p class="h1">Introdução HTML</p>
+          <p class="h2">HTML: Linguagem de Marcação de Hipertexto</p>
+        </div>
+
+        <div class="bd-example">
+          <p class="lead">
+            HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa: "Linguagem de Marcação
+            de Hipertexto") é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem
+            ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML.
+          </p>
+
+          <p class="lead">
+            HyTime é um padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo. Um documento
+            é visto como um conjunto de eventos concorrentes dependentes de tempo (como áudio, vídeo, etc.), conectados
+            por hiperligações (em inglês: hyperlink e link). O padrão é independente de outros padrões de processamento
+            de texto em geral.
+          </p>
+        </div>
+
+        <div class="bd-example">
+          <blockquote class="blockquote">
+            <p>A well-known quote, contained in a blockquote element.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+
+        <div class="bd-example">
+          <ul class="list-unstyled">
+            <li>This is a list.</li>
+            <li>It appears completely unstyled.</li>
+            <li>Structurally, it's still a list.</li>
+            <li>However, this style only applies to immediate child elements.</li>
+            <li>Nested lists:
+              <ul>
+                <li>are unaffected by this style</li>
+                <li>will still show a bullet</li>
+                <li>and have appropriate left margin</li>
+              </ul>
+            </li>
+            <li>This may still come in handy in some situations.</li>
+          </ul>
+        </div>
+
+        <div class="bd-example">
+          <ul class="list-inline">
+            <li class="list-inline-item">This is a list item.</li>
+            <li class="list-inline-item">And another one.</li>
+            <li class="list-inline-item">But they're displayed inline.</li>
+          </ul>
+        </div>
+      </div>
+      </article>
+      <article class="my-3" id="images">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Images</h3>
+          <a class="d-flex align-items-center" href="../content/images/">Documentation</a>
+        </div>
+
+        <div>
+          <div class="bd-example">
+            <img src="./htmlcss.jpg" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250"
+              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+             
+              <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                dy=".3em">#####</text>
+            </svg>
+
+            <img src="./htmlcss.jpg" class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250"
+              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+             
+              <rect width="100%" height="100%" fill="#868e96" />
+            </svg>
+
+          </div>
+
+          <div class="bd-example">
+            <!--<svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                dy=".3em">200x200</text>
+            </svg>
+
+            <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200"
+              preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                dy=".3em">200x200</text>
+            </svg>-->
+
+          </div>
+          
+        </div>
+      </article>
+      <article class="my-3" id="tables">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Tables</h3>
+          <a class="d-flex align-items-center" href="../content/tables/">Documentation</a>
+        </div>
+
+        <div>
+
+          <div class="bd-example">
+            <table class="table table-sm table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="components">
+      <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Components</h2>
+
+      <article class="my-3" id="accordion">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Accordion</h3>
+          <a class="d-flex align-items-center" href="../components/accordion/">Documentation</a>
+        </div>
+
+        <div>
+          <div class="bd-example">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                  </button>
+                </h4>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                  </button>
+                </h4>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
+                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
+                    overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      
+      
+
+      
+      <article class="my-3" id="modal">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Modal</h3>
+          <a class="d-flex align-items-center" href="../components/modal/">Documentation</a>
+        </div>
+
+        <div>
+          <div class="bd-example">
+            <div class="d-flex justify-content-between flex-wrap">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModalFullscreen">
+                Full screen
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+     
+      
+      <article class="my-3" id="popovers">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Popovers</h3>
+          <a class="d-flex align-items-center" href="../components/popovers/">Documentation</a>
+        </div>
+
+        <div>
+          
+
+          <div class="bd-example">
+            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+              data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+              Popover on top
+            </button>
+            
+            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+              data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+              Popover on bottom
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="my-3" id="scrollspy">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Scrollspy</h3>
+          <a class="d-flex align-items-center" href="../components/scrollspy/">Documentation</a>
+        </div>
+
+        <div>
+          <div class="bd-example">
+            <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#scrollspyHeading1">First</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+              tabindex="0">
+              <h4 id="scrollspyHeading1">First heading</h4>
+              <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the
+                appropriate navigation link is highlighted. It's repeated throughout the component example. We keep
+                adding some more example copy here to emphasize the scrolling and highlighting.</p>
+              <h4 id="scrollspyHeading2">Second heading</h4>
+              <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the
+                appropriate navigation link is highlighted. It's repeated throughout the component example. We keep
+                adding some more example copy here to emphasize the scrolling and highlighting.</p>
+              <h4 id="scrollspyHeading3">Third heading</h4>
+              <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the
+                appropriate navigation link is highlighted. It's repeated throughout the component example. We keep
+                adding some more example copy here to emphasize the scrolling and highlighting.</p>
+              <h4 id="scrollspyHeading4">Fourth heading</h4>
+              <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the
+                appropriate navigation link is highlighted. It's repeated throughout the component example. We keep
+                adding some more example copy here to emphasize the scrolling and highlighting.</p>
+              <h4 id="scrollspyHeading5">Fifth heading</h4>
+              <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the
+                appropriate navigation link is highlighted. It's repeated throughout the component example. We keep
+                adding some more example copy here to emphasize the scrolling and highlighting.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      
+      <article class="my-3" id="toasts">
+        <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+          <h3>Toasts</h3>
+          <a class="d-flex align-items-center" href="../components/toasts/">Documentation</a>
+        </div>
+
+        <div>
+          <div class="bd-example bg-dark p-5 align-items-center">
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#007aff" />
+                </svg>
+
+                <strong class="me-auto">Bootstrap</strong>
+                <small class="text-muted">11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                Olá, sejam bem vindos
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLiveLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>I will not close if you click outside me. Don't even try to press escape key.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
+    aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to
+            demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content
+            becomes longer than the prefedined max-height of modal, content will be cropped and scrollable within the
+            modal.</p>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <p>This content should appear at the bottom after you scroll.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="cheatsheet.js"></script>
+</body>
+
+</html>
